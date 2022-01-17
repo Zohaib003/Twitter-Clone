@@ -1,0 +1,186 @@
+/* Styling slide bars */
+
+
+/*Remove browsers defaults and arrange them*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --twitter-color: #50b7f5;
+    --twitter-background: #e6ecf0;
+}
+
+
+/* Display side bar in front of his icons */
+
+
+/* flex = arrange element in particular container*/
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* To space between all icons*/
+
+.sidebarOption .material-icons,
+.fa-twitter {
+    padding: 20px;
+}
+
+
+/* Now style headings */
+
+.sidebarOption h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+/*Now style pressing sidebar options*/
+
+
+/*hover = style a text when you mouse over it*/
+
+
+/*radius = add two rounded corner b/w two elements*/
+
+a {
+    text-decoration: none !important;
+}
+
+.sidebarOption:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+
+/*Design tweet button*/
+
+
+/* .sidebar__tweet {
+    width: 20%;
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+} */
+
+
+/* Design full body */
+
+body {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+
+/* Design Side bar */
+
+.sidebar {
+    border-right: 2px solid var(--twitter-background);
+    flex: 0.2;
+    min-width: 290px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.search-box {
+    position: absolute;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.sidebarOption[name="search"]:hover>.search-txt {
+    /*width for text writing*/
+    width: 140px;
+    padding: 0 6px;
+    margin: 3px
+}
+
+.search-box:hover>.search-btn {
+    background: white;
+}
+
+.search-btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px
+}
+
+/* Design twitter icon blue and its size */
+
+.fa-twitter {
+    color: var(--twitter-color);
+    font-size: 30px;
+}
+.friends_feed{
+    background-color: var(--twitter-background);
+    width:75%;
+}
+.heading{
+    margin-top:0.5%;
+    border:2px solid #800060;
+    height:08%;
+    width:85%;
+    padding-left:2%;
+    background-color:Pink;
+}
+.friend{
+    height:18%;
+    width:85%;
+    background-color:white;
+    display:flex;
+    padding-left:3%;
+    border-top:4px solid  red;
+    margin-top:2px;
+}
+.friend img{
+    height:95%;
+    width:15%;
+    border-radius:50%;
+    display:inline;
+}
+.friend_information{
+    margin-top:4%;
+    margin-left:20%;
+}

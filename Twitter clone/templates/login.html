@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+                             <title>Login</title>    
+<style>
+
+.registeration-form { text-align: center;  margin-left: 25%; width: 45%; height:100%; background-color: rgb(240, 245, 250);}
+
+.button button, .button input[type = "button"]
+ {font-size:larger; margin-bottom: 7%; margin-top: 7%; display:inline-block;width: fit-content; font-size:larger; margin-inline-end:5%;
+margin-inline-start: 5%; height: max-content; padding: 1%;border: black solid 2px; color:white; font-weight: bold;
+background-color: hsl(133, 61%, 40%); background-color:rgb(40 , 167 ,69) }      
+
+.form-fields input[name = "User-Name"],.form-fields input[type ="password"]
+{width: 82%; height: max-content; margin-bottom: 7%; font-size:x-large; border: black solid 2px; scroll-behavior: auto; padding: 1%;}  
+ /* when want to use specific type element [] this is use to access the specific */
+.hyperlink  {  margin-right:70%; font-size:x-large">
+
+}
+
+</style>   
+</head>
+
+<body style ="background-color:rgb(0, 174, 255)" >    
+
+        <center><img class = "logo" src="{{url_for('static', filename='logo2.jpg')}}"  width="80" height="80"> </center>
+        <center><h1>Social Nido</h1></center>
+
+        <a href="/"> <input type="button" style = "width:fit-content;margin-left:35%; margin-right:10%;
+                padding-right:3.6% ;padding-left:3.6% ; padding-top:1.3% ;  padding-bottom: 1.3%;
+                font-size:larger ; background-color: springgreen; font-size:larger; margin-bottom: 10px;"
+              value="Sign Up"></a>
+    
+            <a href="/3rd"> <input type="button"  style = "width:fit-content; font-size:larger;
+                padding-right:4% ;padding-left:4%; padding-top:1.3% ;  padding-bottom: 1.3%;
+                background-color: springgreen;font-size:larger; margin-bottom: 10px; "
+            value="Login"></a>
+        
+
+                <div class="registeration-form">
+                    <form method="POST" >
+            
+<div style="color:rgb(103, 99, 99); text-align:center; padding-top:9%; margin-bottom:5%; 
+ font-size:xx-large;  ">  ------ Login ------    </div>
+            
+<p style="margin-bottom:4%; text-align:left; margin-left:8%"> Create your account. It's free and only takes a minute.</p>
+
+
+<div class="form-fields"> <input type="text" name="User-Name" placeholder="UserName" required>
+
+<div class="form-fields">  <input type="password" name="Password" placeholder="Password" required >    </div>
+
+<div class="hyperlink">
+        <a href = " ">Forget Your Password</a>
+</div>
+
+
+<span class = "button">
+<a href = "/" > <input type="button" value="Cancel"></a>
+
+    <button type ="submit" >Login</button>
+</span>
+
+        </form>  </div>  </body>   </html>

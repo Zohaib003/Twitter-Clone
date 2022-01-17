@@ -1,0 +1,137 @@
+<!--Twitter Dashboard Designing-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter_Clone</title>
+    <!--import google font icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--After that we link our css file-->
+    <link rel="stylesheet" href = '{{style}}' />
+    <!--Import twitter font from the cdnjs and from font_awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+
+<body>
+    <!--Building side_bar starts-->
+    <div class="sidebar">
+        <!--Inside this side bar we have to show twitter icon by importing twitter icon class-->
+        <i class="fab fa-twitter"></i>
+
+        <!--Seperate indiviual classes and container for all of others-->
+        <!--Home icon-->
+        <a href="{{ url_for('dashboard', name=name,image=image) }}">
+            <div class="sidebarOption active">
+                <span class="material-icons"> home </span>
+                <h2> Home </h2>
+            </div>
+        </a>
+
+        <!--Search icon-->
+
+        <div class="sidebarOption active">
+            <!-- <span class="material-icons">search</span> -->
+
+
+
+            <div class="sidebarOption active" name="search">
+                <input class="search-txt" type="text" name=" search" placeholder="Type to search">
+
+                <a class="search-btn" href="#"><img src="https://icon-library.com/images/image-search-icon/image-search-icon-3.jpg" width="25px" height="25px" alt="search"></a>
+                <h4 style="color:#50b7f5; padding-left:3px;">search</h4>
+            </div>
+
+        </div>
+
+        <!--Notification icon-->
+        <a href="{{ url_for('notification', name=name,image=image) }}">
+            <div class="sidebarOption ">
+                <span class="material-icons"> notifications_none </span>
+                <h2>Notifications</h2>
+            </div>
+        </a>
+
+        <!--Message icon-->
+        <a href="{{ url_for('followings', name=name,image=image) }}">
+            <div class="sidebarOption ">
+                <span class="material-icons"> mail_outline </span>
+                <h2>Followings</h2>
+            </div>
+        </a>
+        <!--Profile-->
+        <a href="{{ url_for('profile', name=name,image=image) }}">
+            <div class="sidebarOption ">
+                <span class="material-icons"> account_circle </span>
+                <h2> Profile </h2>
+            </div>
+        </a>
+        <!--Twitter button-->
+        <!--</div>
+    <button class="sidebar__tweet">Tweet</button>
+    </div>-->
+    </div>
+
+
+
+
+    <!--Building side_bar ends-->
+    <!-- feed starts -->
+
+    <div class="feed">
+        <div class="feed__header">
+            <h2>Cool ;)</h2>
+        </div>
+
+        <!-- feed ends -->
+
+        {% for i in range(0,len)%}
+        <div class="post">
+            <div class="post__avatar">
+                <img src="{{posts[i][1]}}" alt="" />
+            </div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3>
+                            {{posts[i][2]}}
+                            <span class="post__headerSpecial"><span class="material-icons post__badge"> verified
+                            </span>@{{posts[i][3]}}</span>
+                            <a href="{{url_for('friend', name=name,f_name=posts[i][3],image=image)}}" class="follow">
+                                Follow</a>
+                        </h3>
+                    </div>
+                    <div class="post__headerDescription">
+                        <p>{{posts[i][4]}}.</p>
+                    </div>
+                </div>
+                <img src="{{posts[i][5]}}" alt="" />
+                <div class="post__footer">
+
+                     <span class="material-icons" > <span class="heart" onclick="changecolor()">favorite_border</span> </span>
+                    <script>
+                        function changecolor(){
+                            document.querySelector('.heart').style.color='red';
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+    <div class="friend_id">
+        <img src="{{list[2]}}">
+        <span style="color:red; margin-left:2%;margin-bottom:2%;">  @{{list[3]}}</span>
+        <div class="F_LName">
+            <h1>{{list[0]}} {{list[1]}}</h1>
+            </divc>
+        </div>
+    </div>
+</body>
+
+</html>

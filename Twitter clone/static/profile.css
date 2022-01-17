@@ -1,0 +1,209 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --twitter-color: #50b7f5;
+    --twitter-background: #e6ecf0;
+}
+
+
+/* Display side bar in front of his icons */
+
+
+/* flex = arrange element in particular container*/
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* To space between all icons*/
+
+.sidebarOption .material-icons,
+.fa-twitter {
+    padding: 20px;
+}
+
+
+/* Now style headings */
+
+.sidebarOption h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+/*Now style pressing sidebar options*/
+
+
+/*hover = style a text when you mouse over it*/
+
+
+/*radius = add two rounded corner b/w two elements*/
+
+a {
+    text-decoration: none !important;
+}
+
+.sidebarOption:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+
+/*Design tweet button*/
+
+
+/* .sidebar__tweet {
+    width: 20%;
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+} */
+
+
+/* Design full body */
+
+body {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+
+/* Design Side bar */
+
+.sidebar {
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.2;
+    min-width: 290px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Design twitter icon blue and its size */
+
+.fa-twitter {
+    color: var(--twitter-color);
+    font-size: 30px;
+}
+
+/* profile properties*/
+.head{
+    background-color:var(--twitter-color);
+    border-bottom: 1px solid Green;
+    width:100%;
+}
+
+.search-box {
+    position: absolute;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.sidebarOption[name="search"]:hover>.search-txt {
+    /*width for text writing*/
+    width: 140px;
+    padding: 0 6px;
+    margin: 3px
+}
+
+.search-box:hover>.search-btn {
+    background: white;
+}
+
+.search-btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px
+}
+.profile{
+    width:100%;
+    background-color: var(--twitter-background);
+    border-left:3px solid pink;
+
+}
+.information_box{
+    border:solid var(--twitter-color) 4px;
+    border-radius:10%;
+    width:35%;
+    background-color:white;
+    padding:10px;
+}
+.information_box_divs{
+    margin-left:6px;
+    margin-top:5px;
+    padding-top:15px;
+
+}
+.information_box_divs_box{
+    margin-left:20%;
+    margin-right:5%;
+    margin-top:5px;
+    border: 1px pink double;
+    border-radius:10%;
+    text-size:14px;
+    margin-bottom:4px;
+    padding-top:8%;
+    padding-bottom:3%;
+    padding-left:2%;
+}
+.profile_imge {
+    margin-left:5%;
+    width:50%;
+
+}
+.profile_imge img{
+
+    border-radius:50% ;
+    height:60%;
+    width:60%;
+}
+.information_of_profile{
+    padding-top:12%;
+    padding-left:5%;
+    display:flex;
+
+}
+.user_image{
+    margin-top:5%; margin-left:40%; color:#800060;
+}
